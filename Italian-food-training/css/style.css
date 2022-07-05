@@ -166,9 +166,7 @@ h6 {
 }
 
 .header__link {
-  font-family: "Open Sans";
   font-size: calc(22px + -2 * ((100vw - 320px) / 1120));
-  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -207,7 +205,9 @@ h6 {
 }
 
 body {
-  overflow-x: hidden;
+  line-height: 1.2;
+  font-family: "OpenSans";
+  font-weight: 400;
 }
 
 body.lock {
@@ -216,7 +216,7 @@ body.lock {
 
 .intro {
   width: 100%;
-  height: 120%;
+  height: 120vh;
   overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,6 +338,112 @@ body.lock {
   width: 480px;
 }
 
+.menu {
+  width: 100%;
+  height: 155vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__title {
+  font-size: calc(32px + 43 * ((100vw - 320px) / 1120));
+  color: #222328;
+  padding: 80px 0px 80px 0px;
+}
+
+.menu__text {
+  font-size: calc(14px + 13.1 * ((100vw - 320px) / 1120));
+  color: #2f3135;
+  width: 750px;
+  text-align: center;
+}
+
+.menu__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 80px 40px 120px 40px;
+}
+
+.menu__box-item {
+  padding: 0px 0px 0px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__box-item img {
+  padding: 0px 0px 0px 30px;
+}
+
+.menu__img {
+  max-width: 100%;
+}
+
+.menu__sub-title {
+  font-size: calc(18px + 11.2 * ((100vw - 320px) / 1120));
+  font-weight: 700;
+  color: #343434;
+  padding: 50px 0px 20px 0px;
+}
+
+.menu__sub-title_one {
+  padding: 68px 0px 20px 0px;
+}
+
+.menu__sub-title_two {
+  padding: 54px 0px 20px 0px;
+}
+
+.menu__box-text {
+  font-size: calc(14px + 9 * ((100vw - 320px) / 1120));
+  color: #343434;
+}
+
+.menu__btn {
+  width: 334px;
+  height: 75px;
+  background-color: #343434;
+  border-radius: 40px;
+}
+
+.menu__btn-link {
+  font-size: calc(18px + 5.2 * ((100vw - 320px) / 1120));
+  line-height: 3.2;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .menu__sub-title_one {
+    padding: 40px 0px 20px 0px;
+  }
+
+  .menu__sub-title_two {
+    padding: 36px 0px 20px 0px;
+  }
+
+  .menu {
+    height: 130vh;
+  }
+
+  .menu__btn-link {
+    line-height: 3.5;
+  }
+}
+
 @media (max-width: 768px) {
   .menu__link {
     position: absolute;
@@ -447,7 +553,7 @@ body.lock {
   }
 
   .intro {
-    height: 220%;
+    height: 200%;
   }
 
   .intro__box-item_1 {
@@ -461,6 +567,53 @@ body.lock {
   .imtro__img_3 {
     top: 470px;
   }
+
+  .menu__btn-link {
+    line-height: 3.7;
+  }
+
+  .menu__sub-title_one {
+    padding: 43px 0px 20px 0px;
+  }
+
+  .menu__sub-title_two {
+    padding: 42px 0px 20px 0px;
+  }
+
+  .menu__text {
+    width: 500px;
+  }
+}
+
+@media (max-width: 660px) {
+  .menu__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .menu__box-item {
+    padding: 0px 0px 40px 0px;
+  }
+
+  .menu__sub-title {
+    padding: 0px 0px 10px 0px;
+  }
+
+  .menu__box {
+    padding: 80px 40px 60px 40px;
+  }
+
+  .menu {
+    height: 240vh;
+  }
+}
+
+@media (max-width: 520px) {
+  .menu__text {
+    width: 400px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -473,7 +626,7 @@ body.lock {
   }
 
   .intro {
-    height: 180%;
+    height: 170%;
   }
 
   .imtro__img_1 {
@@ -495,8 +648,38 @@ body.lock {
   }
 }
 
+@media (max-width: 425px) {
+  .menu__text {
+    width: 300px;
+  }
+
+  .menu__btn {
+    width: 260px;
+  }
+
+  .menu__btn-link {
+    line-height: 4;
+  }
+
+  .menu {
+    height: 230vh;
+  }
+}
+
 @media (max-width: 420px) {
   .header__burger {
     left: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu {
+    height: 210vh;
+  }
+}
+
+@media (max-width: 340px) {
+  .menu {
+    height: 190vh;
   }
 }

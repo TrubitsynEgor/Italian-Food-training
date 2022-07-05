@@ -18,14 +18,13 @@
 	height: 100px;
 }
 .header__link {
-	font-family: 'Open Sans';
 	@include adaptiv-font(20,22);
-	line-height: 1.2;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 	color: #ffffff;
 	padding: 0px 40px 0px 0px;
+
 		
 }
 .header__search-form{position: relative;margin: 0px 30px 0px 0px;
