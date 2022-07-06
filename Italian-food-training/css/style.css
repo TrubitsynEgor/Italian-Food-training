@@ -131,13 +131,14 @@ h6 {
 }
 
 .header {
-  height: 150px;
+  height: 100px;
   width: 100%;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 5;
+  background-color: rgba(59, 62, 67, 0.2);
 }
 
 .header__menu {
@@ -643,6 +644,65 @@ body.lock {
   max-width: 100%;
 }
 
+.coments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+.coments__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 50px 0px 50px;
+}
+
+.coments__box-item {
+  padding: 0 50px;
+}
+
+.coments__title {
+  text-align: center;
+  font-family: "Reey";
+  font-size: calc(26px + 15.7 * ((100vw - 320px) / 1120));
+  line-height: 33px;
+  color: #393939;
+  padding: 0px 0px 40px 0px;
+}
+
+.coments__text {
+  font-size: calc(16px + 2.8 * ((100vw - 320px) / 1120));
+  line-height: 24px;
+  color: #333d42;
+}
+
+.coments__quote {
+  margin: 0 auto;
+  font-size: calc(18px + 7 * ((100vw - 320px) / 1120));
+  font-weight: 600;
+  color: #3f3f3f;
+  width: 60%;
+  text-align: center;
+}
+
+.quote__autor {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+  font-size: calc(18px + 5.9 * ((100vw - 320px) / 1120));
+  line-height: 33px;
+  font-weight: 800;
+  color: #3f3f3f;
+}
+
 @media (min-width: 1600px) {
   .menu {
     height: 135vh;
@@ -682,6 +742,10 @@ body.lock {
     left: -33%;
     top: 56%;
     width: 408px;
+  }
+
+  .coments__box-item {
+    padding: 0 20px;
   }
 }
 
@@ -885,6 +949,21 @@ body.lock {
   .preview__images {
     top: 50%;
   }
+
+  .coments__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .coments__quote {
+    width: 70%;
+  }
+
+  .coments__box-item {
+    padding: 0px 0px 40px 0px;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1005,6 +1084,14 @@ body.lock {
   .preview {
     height: 95vh;
   }
+
+  .coments {
+    height: 130vh;
+  }
+
+  .coments__box {
+    margin: 0px 20px 0px 20px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1058,6 +1145,10 @@ body.lock {
 
   .preview__images {
     top: 76.7%;
+  }
+
+  .coments__quote {
+    width: 80%;
   }
 }
 

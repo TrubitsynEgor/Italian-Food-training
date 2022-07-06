@@ -1,9 +1,10 @@
 .header {
-	height: 150px;
+	height: 100px;
 	width: 100%;
 	position: fixed;
 	left: 0;top: 0;right:0;
 	z-index: 5;
+	background-color: rgba(59, 62, 67, .2);
 }
 .header__menu{
 	display: flex;
